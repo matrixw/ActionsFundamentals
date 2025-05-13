@@ -13,8 +13,9 @@ jobs:
   myjob: 
     runs-on: ubuntu-latest 
     steps: 
-      uses: actions/checkout@v4          
-      name: Task from excerecise
+      - uses: actions/checkout@v4          
+      - name: Task from excerecise
       - run: | 
-        echo "Name of job is {{ github.event_name }} "
-        echo "List files {{ github.branch_name  }} "
+          echo "Name of job is {{ github.event_name }} "
+          echo "List files {{ github.branch_name  }} "
+          
