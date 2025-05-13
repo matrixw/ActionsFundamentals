@@ -10,13 +10,11 @@ on:
   workflow_dispatch:
 
 jobs: 
-  myjob:
+  myjob: 
     runs-on: ubuntu-latest 
     steps: 
-      - run: |
-        echo "Name of job is {{ github.event_name }}"
-        echo "List files"
-          
-  
-      
-    
+      uses: actions/checkout@v4          
+      name: Task from excerecise
+      - run: | 
+        echo "Name of job is {{ github.event_name }} "
+        echo "List files {{ github.branch_name  }} "
